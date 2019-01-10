@@ -18,6 +18,8 @@ Python 2.7.9
 
 ## Example usage
 
+### Running without docker
+
 Make the application executable:
 ```
 $ chmod +x mtou.py 
@@ -43,7 +45,13 @@ eg.: ./application 192.168.1.10 80
 
 Started httpserver on  127.0.0.1 8080
 ```
-___
+
+### Using docker image
+
+Docker build is available on hub:
+https://hub.docker.com/r/dpelengic/mtou
+
+### Play-out content
 
 Example Client request (Tested with VLC media player):
 ```
@@ -51,4 +59,4 @@ http://127.0.0.1:8080/239.1.1.1:5000
 ```
 Note that path parameter should be a valid Multicast IP and Port pair. Putting any other/more parameters, will fail with HTTP 400 error code.
 
-_This example also assumes video content is available on MTOU server, Multicast address 239.1.1.1, port 5000._
+_This example also assumes video content is available to MTOU server, Multicast address 239.1.1.1, port 5000._
